@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <title>Tudo Sobre Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
     <script src="_javascript/funcoes.js">
     </script>
     <script>
         function calc_total() {
-            var qtd =parseInt document.getElementById ('cQtd').value
-        } 
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
     </script>
 </head>
 
@@ -17,7 +21,7 @@
 <body>
     <div id="interface">
 
-        <link rel="stylesheet" href="_css/estilo.css">
+
         <hgroup>
             <header id="cabecalho">
                 <h1>Google Glass </h1>
@@ -32,17 +36,14 @@
                         <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')">
                             <a href="index.html"> Home</a>
                         </li>
-                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')"
-                            onmouseout="mudaFoto('_imagens/contato.png')"> <a href="specs.html">Especificações </a>
+                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="specs.html">Especificações </a>
                         </li>
                         <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')">
                             <a href="fotos.html"> Fotos</a>
                         </li>
-                        <li onmouseover="mudaFoto('_imagens/multimidia.png')"
-                            onmouseout="mudaFoto('_imagens/contato.png')"> <a href="multimidia.html"> Multimídia</a>
+                        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="multimidia.html"> Multimídia</a>
                         </li>
-                        <li onmouseover="mudaFoto('_imagens/contato.png')"
-                            onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html"> Fale conosco</a>
+                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html"> Fale conosco</a>
                         </li>
 
                     </ul>
@@ -64,19 +65,15 @@
 
                 </article>
             </section>
-            <form method="post" id="fContato" action="" oninput="calc_total();">
+            <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
 
                 <fieldset id="usuario">
                     <legend> Identificação do Usuário</legend>
-                    <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20"
-                            maxlength="30" placeholder="Nome Completo"></p>
-                    <p> <label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8"
-                            maxlength="8" placeholder="8 digitos"></p>
-                    <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20"
-                            maxlength="40"></p>
+                    <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+                    <p> <label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 digitos"></p>
+                    <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlength="40"></p>
                     <fieldset id="sexo">
-                        <legend>Sexo: </legend><input type="radio" name="tSexo" id="cMasc" checked> <label
-                            for="cMasc">Masculino</label>
+                        <legend>Sexo: </legend><input type="radio" name="tSexo" id="cMasc" checked> <label for="cMasc">Masculino</label>
                         <br>
                         <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label>
                     </fieldset>
@@ -85,10 +82,8 @@
 
                 <fieldset id="endereco">
                     <legend>Endereço do Usuário</legend>
-                    <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13"
-                            maxlength="80" placeholder="Rua. Av, Trav, ..."></p>
-                    <p> <label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0"
-                            max="99999"></p>
+                    <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua. Av, Trav, ..."></p>
+                    <p> <label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
                     <p><label for="cEst">Estado:</label> <select name="tEst" id="cEst">
                             <optgroup label="Região Sudeste">
                                 <option value="RJ">Rio de Janeiro</option>
@@ -101,8 +96,7 @@
                                 <option value="RS">Rio Grande do Sul</option>
                             </optgroup>
                         </select></p>
-                    <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" maxlength="40"
-                            size="20" placeholder="Sua Cidade" list="cidades"></p>
+                    <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
                     <datalist id="cidades">
                         <option value="Rio de Janeiro"></option>
                         <option value="Nova Iguaçu"></option>
@@ -114,10 +108,8 @@
 
                 <fieldset id="mensagem">
                     <legend>Mensagem do Usuário</legend>
-                    <p><label for="cUrg">Grau de Urgência:</label> Mín <input type="range" name="tUrg" id="cUrg" min="0"
-                            max="10" step="2">Máx</p>
-                    <p><label for="cMasg">Mensagem:</label> <textarea name="tMsg" id="cMasg" cols="45" rows="5"
-                            placeholder="Deixe aqui sua mensagem"></textarea></p>
+                    <p><label for="cUrg">Grau de Urgência:</label> Mín <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                    <p><label for="cMasg">Mensagem:</label> <textarea name="tMsg" id="cMasg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
                 </fieldset>
 
                 <fieldset id="pedido">
@@ -127,10 +119,8 @@
                     </p>
 
                     <p><label for="cCor"> <input type="color" name="tCor" id="cCor" value="#0000FF"> Cor:</label></p>
-                    <p><label for="cQtd">Quantidade: </label> <input type="number" name="tQtd" id="cQtd" min="0" max="5"
-                            value="0"></p>
-                    <p><label for="cTot">Preço Total: R$</label> <input type="text" name="tToc" id="cToc"
-                            placeholder="Total a Pagar" readonly>
+                    <p><label for="cQtd">Quantidade: </label> <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+                    <p><label for="cTot">Preço Total: R$</label> <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly>
                     </p>
 
                 </fieldset>
@@ -139,9 +129,7 @@
             </form>
 
             <footer id="rodape">
-                <p> Copyright 2013 - by Gustavo Guanabara <br> <a href="http://facebook.com/cursosemvideo"
-                        target="_blank">Facebook </a> | <a href="http://twitter.com/cursosemvideo"
-                        target="_blank">Twitter</a> </p>
+                <p> Copyright 2013 - by Gustavo Guanabara <br> <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook </a> | <a href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a> </p>
             </footer>
     </div>
 </body>

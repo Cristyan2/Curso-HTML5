@@ -5,6 +5,21 @@
     src: url(../_fonts/bubblegum-sans-regular.otf);
 }
 
+video#primeirovideo {
+    display: block;
+    position: relative;
+    width: 450px;
+    margin: auto;
+}
+
+video#segundovideo {
+    display: block;
+    position: relative;
+    left: -4px;
+    width: 380px;
+    margin: auto;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: gray;
@@ -177,6 +192,7 @@ section#corpo {
 aside#lateral {
     display: block;
     width: 390px;
+    height: 680px;
     float: right;
     padding-left: 10px;
     background-color: #dddddd;
