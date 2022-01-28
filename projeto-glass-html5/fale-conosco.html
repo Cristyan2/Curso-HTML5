@@ -108,14 +108,20 @@
 
                 <fieldset id="mensagem">
                     <legend>Mensagem do Usuário</legend>
-                    <p><label for="">Grau de Urgência:</label> Mín <input type="range" name="tUrg" id="cUrg" min="0"
+                    <p><label for="cUrg">Grau de Urgência:</label> Mín <input type="range" name="tUrg" id="cUrg" min="0"
                             max="10" step="2">Máx</p>
-                    <p><label for="">Mensagem:</label> <textarea name="tMsg" id="cMasg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                    <p><label for="cMasg">Mensagem:</label> <textarea name="tMsg" id="cMasg" cols="45" rows="5"
+                            placeholder="Deixe aqui sua mensagem"></textarea></p>
                 </fieldset>
 
                 <fieldset id="pedido">
-                    <legend>Quero um Google Glass</legend> Gostaria de adquirir um Google Glass quando disponível Cor:
-                    Quantidade: Preço Total: R$
+                    <legend>Quero um Google Glass</legend>
+                    <p> <input type="checkbox" name="tPed" id="cPed" checked> 
+                        <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                    <p><label for="cCor"> Cor:</label></p>
+                    <p><label for="cQtd">Quantidade: </label></p>
+                    <p><label for="cTot">Preço Total: R$</label></p>
+
                 </fieldset>
 
                 [BOTÃO ENVIAR]
